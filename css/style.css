@@ -1,0 +1,40 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* common */
+.flex {
+    display: flex;    
+}
+.container {
+    height: calc(100vh - 90px);
+}
+.p-relative {
+    position: relative;
+}
+/* main */
+.main-nav {
+    background-color: black;    
+    width: 230px;
+}
+.header-main-container {
+    width: calc(100% - 230px);
+}
+header {
+    height: 90px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+main {
+    background-color: #141922;
+    width: 100%;
+    height: 100%;
+}
+/* footer */
+footer {
+    height: 90px;
+    background-color: #282828;
+}
