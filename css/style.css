@@ -10,6 +10,7 @@
 }
 .container {
     height: calc(100vh - 90px);
+    overflow-y: hidden;
 }
 .p-relative {
     position: relative;
@@ -24,42 +25,44 @@
 .main-nav {
     background-color: black;    
     width: 230px;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 .main-nav > .nav-container {
     width: 100%;
     padding: 20px 20px 15px 20px;
 }
-.main-nav-top, .main-nav-bottom {
+.nav-container.top, .nav-container.bottom {
     width: 100%;
 }
 /* main nav top */
-.main-nav-top > img {
+.nav-container.top > img {
     height: 40px;
     margin-bottom: 30px;
 }
-.main-nav-top > ul {
+.nav-container.top > ul {
     list-style: none;
     margin-bottom: 30px;
 }
-.main-nav-top li {
+.nav-container.top li {
     margin-bottom: 12px;
 }
-.main-nav-top li img, .main-nav-bottom > a > img {
+.nav-container.top li img, .nav-container.bottom > a > img {
     height: 30px;
     vertical-align: middle;
     opacity: 0.5;
 }
-.main-nav-top a, .main-nav-bottom a {
+.nav-container.top a, .nav-container.bottom a {
     text-decoration: none;
     color: #6d6d6d;
     font-size: 15px;
     font-weight: 600;
 }
 /* li hover */
-.main-nav-top li a:hover img, .main-nav-bottom a:hover img {
+.nav-container.top li a:hover img, .nav-container.bottom a:hover img {
     opacity: unset;
 }
-.main-nav-top li a:hover, .main-nav-bottom a:hover {
+.nav-container.top li a:hover, .nav-container.bottom a:hover {
     color: #fff;
 }
 /* li speciale */
@@ -74,7 +77,7 @@ li.special {
     padding-left: 17px;
     transform: translate(-20px);
 }
-.main-nav-top h4 {
+.nav-container.top h4 {
     color: #fff;
 }
 /* button playlist */
@@ -102,16 +105,38 @@ li.special {
 .btn.playlist:hover::before {
     background-color: #fff;
 }
-.ul-scroll > li {
+.nav-container.top > .ul-scroll > li {
     margin-bottom: 25px;
 }
 .ul-scroll {
     overflow-y: auto;
 }
 /* main nav bottom */
-.main-nav-bottom > a > img {
+.nav-container.bottom > a {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #6d6d6d;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+.nav-container.bottom > a > img {
     height: 20px;
     vertical-align: middle;
+}
+.nav-container.bottom > .profile {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile > .image {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* header */
