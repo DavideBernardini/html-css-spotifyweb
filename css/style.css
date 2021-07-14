@@ -14,7 +14,8 @@
 .p-relative {
     position: relative;
 }
-/* main */
+ 
+/* main nav */
 .main-nav {
     background-color: black;    
     width: 230px;
@@ -22,12 +23,32 @@
 .header-main-container {
     width: calc(100% - 230px);
 }
+
+/* header */
 header {
     height: 90px;
-    width: 100%;
+    width: calc(100% - 230px);
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+    align-items: center;
+    justify-content: flex-end;
 }
+header > button {
+    margin-right: 5px;
+    font-size: 15px;
+    padding: 15px 40px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.05s;
+}
+header > button:hover {
+    transform: scale(1.1);
+}
+
+/* main */
 main {
     background-color: #141922;
     width: 100%;
