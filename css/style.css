@@ -6,7 +6,7 @@
 }
 /* common */
 .flex {
-    display: flex;    
+    display: flex;   
 }
 .container {
     height: calc(100vh - 90px);
@@ -14,17 +14,110 @@
 .p-relative {
     position: relative;
 }
- 
+.btn {
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
 /* main nav */
 .main-nav {
     background-color: black;    
     width: 230px;
 }
-.header-main-container {
-    width: calc(100% - 230px);
+.main-nav > .nav-container {
+    width: 100%;
+    padding: 20px 20px 15px 20px;
+}
+.main-nav-top, .main-nav-bottom {
+    width: 100%;
+}
+/* main nav top */
+.main-nav-top > img {
+    height: 40px;
+    margin-bottom: 30px;
+}
+.main-nav-top > ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+.main-nav-top li {
+    margin-bottom: 12px;
+}
+.main-nav-top li img, .main-nav-bottom > a > img {
+    height: 30px;
+    vertical-align: middle;
+    opacity: 0.5;
+}
+.main-nav-top a, .main-nav-bottom a {
+    text-decoration: none;
+    color: #6d6d6d;
+    font-size: 15px;
+    font-weight: 600;
+}
+/* li hover */
+.main-nav-top li a:hover img, .main-nav-bottom a:hover img {
+    opacity: unset;
+}
+.main-nav-top li a:hover, .main-nav-bottom a:hover {
+    color: #fff;
+}
+/* li speciale */
+li.special a {
+    color: #fff;
+}
+li.special img {
+    opacity: 0.7;
+}
+li.special {
+    border-left: 3px solid #adff2f;
+    padding-left: 17px;
+    transform: translate(-20px);
+}
+.main-nav-top h4 {
+    color: #fff;
+}
+/* button playlist */
+.btn.playlist {
+    margin: 15px 0 25px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #6d6d6d;
+}
+.btn.playlist::before {
+    font-family: 'Font Awesome 5 free';
+    content: "\f067";
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 25px;
+    color: #000;
+    background-color: #a3a3a3;
+    padding: 10px 13px;
+}
+.btn.playlist:hover{
+    color: #fff;
+}
+.btn.playlist:hover::before {
+    background-color: #fff;
+}
+.ul-scroll > li {
+    margin-bottom: 25px;
+}
+.ul-scroll {
+    overflow-y: auto;
+}
+/* main nav bottom */
+.main-nav-bottom > a > img {
+    height: 20px;
+    vertical-align: middle;
 }
 
 /* header */
+.header-main-container {
+    width: calc(100% - 230px);
+}
 header {
     height: 90px;
     width: calc(100% - 230px);
@@ -33,15 +126,12 @@ header {
     align-items: center;
     justify-content: flex-end;
 }
-header > button {
+header > .btn {
     margin-right: 5px;
-    font-size: 15px;
     padding: 15px 40px;
     border: 1px solid #fff;
     border-radius: 25px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    font-weight: bold;
     transition: transform 0.05s;
 }
 header > button:hover {

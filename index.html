@@ -8,7 +8,7 @@
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
         <!-- /font -->
         <!-- fontawsome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -20,12 +20,77 @@
     <body>
         <!-- container per nav header e footer -->
         <div class="container flex">
+            <!-- main nav -->
             <nav class="main-nav">
-                
+                <div class="nav-container">
+                    <div class="main-nav-top">
+                        <!-- logo -->
+                        <img src="img/logo.svg" alt="logo Spotify">
+                        <!-- /logo -->
+                        <!-- prima lista -->
+                        <ul>
+                            <li class="special">
+                                <a href="#">
+                                   <img src="img/home.svg" alt="icona home">
+                                   Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/search.svg" alt="icona lente ricerca">
+                                    Cerca
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/libreria.svg" alt="icona libreria">
+                                    La tua libreria
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /prima lista -->
+                        <h4>PLAYLIST</h4>
+                        <button class="btn playlist">
+                            Crea playlist
+                        </button>
+                        <!-- lista scroll -->
+                        <ul class="ul-scroll">
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                            <li>
+                                <a href="#">Nome Playlist</a>
+                            </li>
+                        </ul>
+                        <!-- /lista scroll -->
+                    </div>
+                    <div class="main-nav-bottom">
+                        <a href="#">
+                            <img src="img/download.svg" alt="icona dowload">
+                            Installa app
+                        </a>
+                    </div>
+                </div>
             </nav>
+            <!-- /main nav -->
             <div class="header-main-container p-relative">
                 <header class="flex">
-                    <button>EFFETTUA L'UPGRADE</button>
+                    <button class="btn">EFFETTUA L'UPGRADE</button>
                 </header>
                 <main></main>
             </div>
