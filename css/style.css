@@ -56,7 +56,7 @@ body {
     vertical-align: middle;
     opacity: 0.5;
 }
-.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a, .album > h5  {
+.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a, .album > h5, main > h5  {
     text-decoration: none;
     color: #6d6d6d;
     font-size: 15px;
@@ -167,6 +167,7 @@ header {
     position: fixed;
     align-items: center;
     justify-content: flex-end;
+    z-index: 1;
 }
 header > .btn {
     margin-right: 25px;
@@ -193,9 +194,6 @@ main > nav > ul {
     list-style: none;
     text-align: center;
 }
-main > nav {
-    margin-bottom: 50px;
-}
 main > nav > ul > li {
     display: inline-block;
     margin: 0 11px;
@@ -218,6 +216,7 @@ main > nav > ul > li:hover hr {
 main > h2 {
     color: #fff;
     font-size: 30px;
+    margin-top: 50px;
 }
 .row {
     margin-top: 35px;
@@ -225,21 +224,18 @@ main > h2 {
     justify-content: space-between;
 }
 .row > .album {
-    width: calc(100% / 6 - 30px);
+    width: calc(100% / 6 - 15px);
     overflow: hidden;
 }
 .album > .image > img {
     width: 100%;
 }
-.album > .overlay:hover::before {
-    content: "";
-    display: block;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 4.5px;
-    left: 0;
-    right: 0;
+.album > .image {
+    position: relative;
+}
+.album > .image:hover img{
+    filter: brightness(0.5);
+}
 }
 .album > .image {
     cursor: pointer;
@@ -259,6 +255,7 @@ main > h2 {
 .image:hover .btn::before {
     display: inline-block;
 }
+
 .album > h3 {
     font-size: 18px;
     color: #fff;
@@ -269,7 +266,18 @@ main > h2 {
     text-align: center;
     margin-top: 16px;
 }
-
+main > .row.for-user, .row.popular {
+    justify-content: flex-start;
+}
+.row.for-user > .album:first-child, .row.row.popular > .album:first-child  {
+    margin-right: 15px;
+}
+.row.popular > .album img {
+    border-radius: 50%;
+}
+main > h5 {
+    margin-top: 20px;
+}
 /* footer */
 footer {
     height: 90px;
