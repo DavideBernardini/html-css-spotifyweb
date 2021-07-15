@@ -21,6 +21,9 @@
     cursor: pointer;
     border: none;
 }
+.overlay {
+    position: relative;
+}
 /* typo */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -53,7 +56,7 @@ body {
     vertical-align: middle;
     opacity: 0.5;
 }
-.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a  {
+.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a, .album > h5  {
     text-decoration: none;
     color: #6d6d6d;
     font-size: 15px;
@@ -214,18 +217,59 @@ main > nav > ul > li:hover hr {
 /* row  */
 main > h2 {
     color: #fff;
-    font-size: 25px;
+    font-size: 30px;
 }
 .row {
     margin-top: 35px;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .row > .album {
     width: calc(100% / 6 - 30px);
+    overflow: hidden;
 }
 .album > .image > img {
     width: 100%;
 }
+.album > .overlay:hover::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 4.5px;
+    left: 0;
+    right: 0;
+}
+.album > .image {
+    cursor: pointer;
+}
+.image > .btn::before {
+    font-family: 'Font Awesome 5 free';
+    content: "\f144";
+    font-weight: 400;
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.image:hover .btn::before {
+    display: inline-block;
+}
+.album > h3 {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 22px;
+}
+.album > h5 {
+    text-align: center;
+    margin-top: 16px;
+}
+
 /* footer */
 footer {
     height: 90px;
