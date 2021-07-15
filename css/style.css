@@ -21,6 +21,10 @@
     cursor: pointer;
     border: none;
 }
+/* typo */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
 /* main nav */
 .main-nav {
     background-color: black;    
@@ -49,17 +53,17 @@
     vertical-align: middle;
     opacity: 0.5;
 }
-.nav-container > .top a, .nav-container > .center-bottom a {
+.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a  {
     text-decoration: none;
     color: #6d6d6d;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
 }
 /* li hover */
 .nav-container > .top li a:hover img, .nav-container > .center-bottom a:hover img {
     opacity: unset;
 }
-.nav-container > .top li a:hover, .nav-container > .center-bottom a:hover {
+.nav-container > .top li a:hover, .nav-container > .center-bottom a:hover, main > nav > ul > li > a:hover  {
     color: #fff;
 }
 /* li speciale */
@@ -91,7 +95,7 @@ li.special {
 /* button playlist */
 .btn.playlist {
     margin: 15px 0 25px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     color: #6d6d6d;
     text-align: left;
@@ -136,7 +140,7 @@ li.special {
 .nav-container .bottom > .profile {
     color: #fff;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .profile > .image {
     display: inline-block;
@@ -178,8 +182,49 @@ main {
     background-color: #141922;
     width: 100%;
     height: 100%;
-    padding: 112px 22px 22px;
+    padding: 112px 35px 22px 22px;
     overflow-y: auto;
+}
+/* nav */
+main > nav > ul {
+    list-style: none;
+    text-align: center;
+}
+main > nav {
+    margin-bottom: 50px;
+}
+main > nav > ul > li {
+    display: inline-block;
+    margin: 0 11px;
+    position: relative;
+}
+main > nav > ul > li > hr {
+    border: 1px solid #adff2f;
+    background-color: #adff2f;
+    width: 35px;
+    margin: auto;
+    display: none;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+}
+main > nav > ul > li:hover hr {
+    display: block;
+}
+/* row  */
+main > h2 {
+    color: #fff;
+    font-size: 25px;
+}
+.row {
+    margin-top: 35px;
+    justify-content: space-between;
+}
+.row > .album {
+    width: calc(100% / 6 - 30px);
+}
+.album > .image > img {
+    width: 100%;
 }
 /* footer */
 footer {
