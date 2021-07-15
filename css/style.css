@@ -69,14 +69,7 @@ body {
 .nav-container > .top li a:hover, .nav-container > .center-bottom a:hover, main > nav > ul > li > a:hover  {
     color: #fff;
 }
-/* li speciale */
-li.special a {
-    color: #fff;
-}
-.nav-container > .top li.special img {
-    opacity: 0.8;
-}
-li.special {
+.nav-container > .top li:hover {
     border-left: 3px solid #adff2f;
     padding-left: 17px;
     transform: translate(-20px);
