@@ -69,7 +69,7 @@ body {
 .nav-container > .top li a:hover, .nav-container > .center-bottom a:hover, main > nav > ul > li > a:hover  {
     color: #fff;
 }
-.nav-container > .top li:hover {
+.main-nav .top li:hover {
     border-left: 3px solid #adff2f;
     padding-left: 17px;
     transform: translate(-20px);
@@ -192,17 +192,19 @@ main > nav > ul > li {
     margin: 0 11px;
     position: relative;
 }
-main > nav > ul > li > hr {
-    border: 1px solid #adff2f;
+main > nav > ul > li > a::after {
+    content: "";
+    
     background-color: #adff2f;
-    width: 35px;
+    width: 40px;
+    height: 2px;
     margin: auto;
     display: none;
     position: absolute;
     right: 50%;
     transform: translate(50%);
 }
-main > nav > ul > li:hover hr {
+main > nav > ul > li > a:hover::after {
     display: block;
 }
 /* row  */
@@ -228,6 +230,7 @@ main > h2 {
 }
 .album > .image:hover img{
     filter: brightness(0.5);
+    cursor: pointer;
 }
 }
 .album > .image {
