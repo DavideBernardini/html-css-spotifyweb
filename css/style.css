@@ -215,10 +215,12 @@ main > h2 {
 .row {
     margin-top: 35px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 .row > .album {
     width: calc(100% / 6 - 15px);
+    margin-right: 15px;
 }
 .album > .image > img {
     width: 100%;
@@ -263,12 +265,6 @@ main > h2 {
     margin-top: 16px;
     cursor: pointer;
 }
-main > .row.for-user, .row.popular {
-    justify-content: flex-start;
-}
-.row.for-user > .album:first-child, .row.row.popular > .album:first-child  {
-    margin-right: 15px;
-}
 .row.popular > .album img {
     border-radius: 50%;
 }
@@ -281,15 +277,18 @@ footer {
     background-color: #282828;
     justify-content: space-between;
 }
-footer > .left, .right {
+footer > .left, footer > .right {
     width: 20%;
     align-items: center;
 }
 footer > .center {
-    width: 50%;
-    background-color: tomato;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
 }
-/* footer sinistra */
+/* footer left */
 footer > .left > .piece {
     height: 100%;
     align-items: center;
@@ -311,6 +310,7 @@ footer > .left > .piece > .album-image {
 }
 footer > .left > .like-folder > .btn {
     margin: 0 7.5px;
+    font-size: 16px;
 }
 .like-folder {
     margin-left: 10%;
@@ -318,4 +318,87 @@ footer > .left > .like-folder > .btn {
 /* da eliminare quando aggiungo classe per tutti gli elementi uguali */
 .caption > a:hover, .left > .like-folder > .btn:hover {
     color: #fff;
+}
+/* footer center */
+.center > .buttons > .btn {
+    font-size: 18px;
+}
+.buttons > .btn:nth-child(2) {
+    margin: 0 30px 0 20px;
+}
+.buttons > .btn:nth-child(4) {
+    margin: 0 20px 0 32px;
+}
+.buttons > .btn:nth-child(3) {
+    font-size: 30px;
+}
+.buttons > .btn:nth-child(3) {
+    font-size: 35px;
+    transition: transform 0.05s;
+}
+.buttons > .btn:nth-child(3):hover {
+    transform: scale(1.1);
+}
+.player {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.playbar {
+    width: 50%;
+    height: 4px;
+    background-color: #6d6d6d;
+    border-radius: 40px;
+    margin: 0 2%;
+    cursor: pointer;
+}
+.playbar > .time {
+    height: 100%;
+    width: 20%;
+    background-color: #c1c1c1;
+    border-radius: 40px;
+    transition: width 0.4s;
+}
+.playbar:hover .time{
+    background-color: #adff2f;
+}
+.playbar:hover .time::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-50% - 4px);
+    right: 0;
+}
+.playbar:active .time {
+    width: 100%;
+}
+.player > div:first-child, .player > div:last-child {
+    color: #fff;
+    font-size: 70%;
+    font-weight: 700;
+}
+/* footer right */
+footer > .right {
+    justify-content: flex-end;
+}
+.right > .playbar {
+    margin: 0 10px;
+}
+.right > .playbar > .time {
+    transition: width 0.3s;
+}
+.right > .playbar:hover .time::after {
+    width: 10px;
+    height: 10px;
+    top: calc(-50% - 1px)
+}
+.right > .btn {
+    font-size: 16px;
+}
+.right > .btn:nth-child(2) {
+    margin: 0 16px;
 }
