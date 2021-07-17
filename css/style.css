@@ -56,7 +56,7 @@ body {
     vertical-align: middle;
     opacity: 0.5;
 }
-.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a, .album > h5, main > h5  {
+.nav-container > .top a, .nav-container > .center-bottom a, main > nav > ul > li > a, .album > h5, main > h5, footer > .left > .like-folder > .btn, .piece > .caption > a  {
     text-decoration: none;
     color: #6d6d6d;
     font-size: 15px;
@@ -194,7 +194,6 @@ main > nav > ul > li {
 }
 main > nav > ul > li > a::after {
     content: "";
-    
     background-color: #adff2f;
     width: 40px;
     height: 2px;
@@ -220,18 +219,17 @@ main > h2 {
 }
 .row > .album {
     width: calc(100% / 6 - 15px);
-    overflow: hidden;
 }
 .album > .image > img {
     width: 100%;
 }
 .album > .image {
     position: relative;
+    display: block;
 }
 .album > .image:hover img{
     filter: brightness(0.5);
-    cursor: pointer;
-}
+    transition: filter 0.3s;
 }
 .album > .image {
     cursor: pointer;
@@ -241,12 +239,13 @@ main > h2 {
     content: "\f144";
     font-weight: 400;
     color: #fff;
-    font-size: 70px;
+    font-size: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    transition: display 0.3s;
 }
 .image:hover .btn::before {
     display: inline-block;
@@ -257,10 +256,12 @@ main > h2 {
     color: #fff;
     text-align: center;
     margin-top: 22px;
+    cursor: pointer;
 }
 .album > h5 {
     text-align: center;
     margin-top: 16px;
+    cursor: pointer;
 }
 main > .row.for-user, .row.popular {
     justify-content: flex-start;
@@ -278,4 +279,43 @@ main > h5 {
 footer {
     height: 90px;
     background-color: #282828;
+    justify-content: space-between;
+}
+footer > .left, .right {
+    width: 20%;
+    align-items: center;
+}
+footer > .center {
+    width: 50%;
+    background-color: tomato;
+}
+/* footer sinistra */
+footer > .left > .piece {
+    height: 100%;
+    align-items: center;
+}
+footer > .left > .piece > .album-image {
+    height: 50%;
+    margin: 0 10px;
+}
+.piece > .album-image > img {
+    height: 100%;
+}
+.piece > .caption > h5:first-child {
+    color: #fff;
+}
+.piece > .caption > a {
+    color: #6d6d6d;
+    font-size: 75%;
+    cursor: pointer;
+}
+footer > .left > .like-folder > .btn {
+    margin: 0 7.5px;
+}
+.like-folder {
+    margin-left: 10%;
+}
+/* da eliminare quando aggiungo classe per tutti gli elementi uguali */
+.caption > a:hover, .left > .like-folder > .btn:hover {
+    color: #fff;
 }
