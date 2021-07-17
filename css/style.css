@@ -85,7 +85,7 @@ body {
     flex-direction: column;
     overflow-y: hidden;
 }
-.nav-container > .center-bottom h4 {
+.nav-container > .top h4 {
     color: #fff;
 }
 /* button playlist */
