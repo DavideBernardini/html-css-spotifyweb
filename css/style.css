@@ -214,6 +214,9 @@ main > h2 {
     color: #fff;
     font-size: 30px;
 }
+main > h2:not(:first-child){
+    margin-top: 50px;
+}
 .row {
     margin-top: 35px;
     flex-wrap: wrap;
