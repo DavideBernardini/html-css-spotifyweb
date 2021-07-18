@@ -214,7 +214,7 @@ main > h2 {
     color: #fff;
     font-size: 30px;
 }
-main > h2:not(:first-child){
+main > h2:not(:nth-child(2)){
     margin-top: 50px;
 }
 .row {
