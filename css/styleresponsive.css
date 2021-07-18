@@ -1,0 +1,73 @@
+/* 1100px */
+@media screen and (max-width: 1100px) {
+    .row > .album {
+        width: calc(100% / 4 - 15px);
+    }
+    .album > h5 {
+        margin-bottom: 10px;
+    }
+}
+
+/* 700px */
+@media screen and (max-width: 700px) {
+    footer > .left > .like-folder {
+        flex-wrap: wrap;
+    }
+    .row > .album {
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+    .main-nav {
+        width: 50px;
+    }
+    .main-nav > .nav-container {
+        padding: 10px;
+    }
+    .header-main-container {
+        flex-grow: 1;
+    }
+    header {
+        width: calc(100% - 50px);
+    }
+    .nav-container > .top > .logo-lg {
+    display: none;
+    }
+    .nav-container > .top > .logo-xs {
+    display: block;
+    height: 30px;
+    margin-bottom: 12px;
+    }
+    .main-nav .top li:hover {
+    border-left: 3px solid #adff2f;
+    padding-left: 7px;
+    transform: translate(-10px);
+}
+    .nav-container span {
+        display: none;
+    }
+    .nav-container h4 {
+        display: none;
+    }
+    .nav-container .btn.playlist {
+        display: none;
+    }
+    .center-bottom > .center {
+        display: none;
+    }
+    .nav-container > .center-bottom {
+        justify-content: flex-end;
+    }
+    .nav-container .bottom {
+        overflow: hidden;
+    }
+    .nav-container .bottom > a {
+        border: none;
+        width: auto;
+    }
+    .nav-container .bottom > a > img {
+            transform: translateX(3px);
+    }
+}

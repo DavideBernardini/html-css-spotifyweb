@@ -40,7 +40,10 @@ body {
     height: 100%;
 }
 /* main nav top */
-.nav-container > .top > img {
+.nav-container > .top > .logo-xs {
+    display: none;
+}
+.nav-container > .top > .logo-lg {
     height: 40px;
     margin-bottom: 30px;
 }
@@ -179,7 +182,7 @@ main {
     background-color: #141922;
     width: 100%;
     height: 100%;
-    padding: 112px 35px 22px 22px;
+    padding: 112px 22px 22px 22px;
     overflow-y: auto;
 }
 /* nav */
@@ -189,7 +192,7 @@ main > nav > ul {
 }
 main > nav > ul > li {
     display: inline-block;
-    margin: 0 11px;
+    margin: 0 11px 50px 11px;
     position: relative;
 }
 main > nav > ul > li > a::after {
@@ -210,7 +213,6 @@ main > nav > ul > li > a:hover::after {
 main > h2 {
     color: #fff;
     font-size: 30px;
-    margin-top: 50px;
 }
 .row {
     margin-top: 35px;
@@ -262,7 +264,7 @@ main > h2 {
 }
 .album > h5 {
     text-align: center;
-    margin-top: 16px;
+    margin-top: 12px;
     cursor: pointer;
 }
 .row.popular > .album img {
@@ -278,11 +280,11 @@ footer {
     justify-content: space-between;
 }
 footer > .left, footer > .right {
-    width: 20%;
+    width: 25%;
     align-items: center;
 }
 footer > .center {
-    width: 60%;
+    width: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -313,9 +315,8 @@ footer > .left > .like-folder > .btn {
     font-size: 16px;
 }
 .like-folder {
-    margin-left: 10%;
+    margin-left: 5%;
 }
-/* da eliminare quando aggiungo classe per tutti gli elementi uguali */
 .caption > a:hover, .left > .like-folder > .btn:hover {
     color: #fff;
 }
@@ -345,7 +346,7 @@ footer > .left > .like-folder > .btn {
     align-items: center;
 }
 .playbar {
-    width: 50%;
+    width: 55%;
     height: 4px;
     background-color: #6d6d6d;
     border-radius: 40px;
@@ -385,8 +386,9 @@ footer > .left > .like-folder > .btn {
 footer > .right {
     justify-content: flex-end;
 }
-.right > .playbar {
+footer > .right > .playbar {
     margin: 0 10px;
+    width: 40%;
 }
 .right > .playbar > .time {
     transition: width 0.3s;
@@ -396,9 +398,9 @@ footer > .right {
     height: 10px;
     top: calc(-50% - 1px)
 }
-.right > .btn {
+.right .btn {
     font-size: 16px;
 }
-.right > .btn:nth-child(2) {
+.right .btn:nth-child(2) {
     margin: 0 16px;
 }

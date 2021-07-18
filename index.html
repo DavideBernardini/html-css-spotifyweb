@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="image/svg" href="img/favicon.ico"/>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/styleresponsive.css">
+        
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,27 +27,30 @@
             <aside class="main-nav">
                 <div class="nav-container flex">
                     <div class="top">
+                        <!-- logo mobile -->
+                        <img class="logo-xs" src="img/logo-small.svg" alt="logo small">
+                        <!-- /logo mobile -->
                          <!-- logo -->
-                        <img src="img/logo.svg" alt="logo Spotify">
+                        <img class="logo-lg" src="img/logo.svg" alt="logo Spotify">
                         <!-- /logo -->
                         <!-- prima lista -->
                         <ul>
                             <li>
                                 <a href="#">
                                     <img src="img/home.svg" alt="icona home">
-                                    Home
+                                    <span>Home</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="img/search.svg" alt="icona lente ricerca">
-                                    Cerca
+                                    <span>Cerca</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
                                     <img src="img/libreria.svg" alt="icona libreria">
-                                    La tua libreria
+                                    <span>La tua libreria</span>
                                 </a>
                             </li>
                         </ul>
@@ -86,13 +91,13 @@
                         <div class="bottom">
                             <a href="#">
                                 <img src="img/download.svg" alt="icona dowload">
-                                Installa app
+                                <span>Installa app</span>
                             </a>
                             <div class="profile">
                                 <div class="image">
                                     <img src="img/profile.svg" alt="icona profilo">
                                 </div>
-                                John Doe
+                                <span>John Doe</span>
                             </div>
                         </div>
                     </div>
@@ -235,6 +240,7 @@
         <!-- /container per nav header e footer -->
         <!-- footer -->
         <footer class="flex">
+            <!-- footer left -->
             <div class="left flex">
                 <div class="piece flex">
                     <div class="album-image">
@@ -254,6 +260,8 @@
                     </button>
                 </div>
             </div>
+            <!-- /footer left -->
+            <!-- footer center -->
             <div class="center flex">
                 <div class="buttons flex">
                     <button class="btn">
@@ -280,20 +288,26 @@
                     <div>4:35</div>
                 </div>
             </div>
+            <!-- /footer center -->
+            <!-- footer right -->
             <div class="right flex">
-                <button class="btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button class="btn">
-                    <i class="fas fa-desktop"></i>
-                </button>
-                <button class="btn">
-                    <i class="fas fa-volume-up"></i>
-                </button>
+                <div class="instruments flex">
+                    <button class="btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fas fa-desktop"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+                    
                 <div class="playbar">
                     <div class="time p-relative"></div>
                 </div>
             </div>
+            <!-- /footer right -->
         </footer>
         <!-- /footer -->
     </body>
