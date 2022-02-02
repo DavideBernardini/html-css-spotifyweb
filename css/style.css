@@ -300,8 +300,9 @@ footer > .left > .piece {
     align-items: center;
 }
 footer > .left > .piece > .album-image {
-    height: 50%;
-    margin: 0 10px;
+    height: 45px;
+    margin: 0 12px 0 10px;
+    width: 45px;
 }
 .piece > .album-image > img {
     height: 100%;
